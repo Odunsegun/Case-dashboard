@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case Dashboard</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <!-- Font Awesome cdn css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> 
+    
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+    <link rel="stylesheet" href="case.css">
+</head>
+<body>
+    <header>
+        <nav class="sidebar-container">
+            <div class="sidebar close">
+                <i class='bx bxs-chevron-left toggle arrow'></i>
+                
+                <div class="sidebar-content">
+                    <div class="side-menu">
+                        <figure class="side-header">
+                            <img class="side-header-logo" src="">
+                        </figure>
+    
+                        <div class="menu">
+                            <ul class="menu-list">
+
+                                <li class="menu-item homer">
+                                    <div class="menu-item-content">
+                                        <figure class="emoji"><i class='bx bxs-dashboard'></i></figure>
+                                    </div>
+                                </li>
+                                
+                                <li class="menu-item">
+                                    <div class="menu-item-content">
+                                        <figure class="emoji"><i class='bx bx-bulb'></i></figure>
+                                    </div>
+                                </li>
+
+                                <div class="nav-line">
+                                    <svg height="1" width="100%">
+                                        <line x1="0" y1="0" x2="100%" y2="0" style="stroke:black;stroke-width:0.5" />
+                                    </svg>
+                                </div>
+                                
+                                <li class="menu-item">
+                                    <div class="menu-item-content">
+                                        <div class="menu-item-content">
+                                            <figure class="emoji"><i class='bx bx-music' ></i></figure>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <div class="nav-line">
+                                    <svg height="1" width="100%">
+                                        <line x1="0" y1="0" x2="100%" y2="0" style="stroke:black;stroke-width:0.5" />
+                                    </svg>
+                                </div>
+
+                                <li class="menu-item">
+                                    <div class="menu-item-content">
+                                        <div class="menu-item-content">
+                                            <figure class="emoji"><i class='bx bxs-thermometer' ></i></figure>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <div class="nav-line">
+                                    <svg height="1" width="100%">
+                                        <line x1="0" y1="0" x2="100%" y2="0" style="stroke:black;stroke-width:0.5" />
+                                    </svg>
+                                </div>
+
+                                <li class="menu-item">
+                                    <div class="menu-item-content">
+                                        <div class="menu-item-content">
+                                            <figure class="emoji"><i class='bx bx-check-shield' ></i></figure>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <div class="nav-line">
+                                    <svg height="1" width="100%">
+                                        <line x1="0" y1="0" x2="100%" y2="0" style="stroke:black;stroke-width:0.5" />
+                                    </svg>
+                                </div>
+
+                                <li class="menu-item">
+                                    <div class="menu-item-content">
+                                        
+                                            <figure class="emoji"><i class='bx bx-bell'></i></figure>
+                                        
+                                    </div>
+                                </li>
+
+                                <div class="nav-bottom">
+                                    <li class="menu-item">
+                                        <div class="menu-item-content">
+                                            <div class="menu-item-content">
+                                                <figure class="emoji"><i class='bx bx-cog' ></i></figure>
+                                            </div>
+                                        </div>
+                                    </li>
+    
+                                    <li class="menu-item">
+                                        <div class="menu-item-content">
+                                            <div class="menu-item-content">
+                                                <figure class="profile-container">
+                                                    <img class="profile-pic" src="https://pics.filmaffinity.com/central_cee_ungrateful-498521810-large.jpg" alt="">
+                                                </figure>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </div>
+                            </ul>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+        </nav>
+    </header>
+
+    <main class="root" id="root">
+        <section class="Room-changer">
+            <div class="w-layout-blockcontainer container w-container">
+                <div class="room-container">
+                    <div class="room-holder">
+                        <div class="room">
+                            <div class="room-content">
+                                <div class="room-nav living">
+                                    <div class="room-nav-content">
+                                        <button class="liveBtn">
+                                            <figure class="room-live-icon"> </figure>
+                                            <h3 class="live-text">
+                                                Live
+                                            </h3>
+                                        </button>
+                                    
+
+                                        <div class="room-right-buttons">
+                                            <button class="room-nav-leftBtn temp">
+                                                <figure class="room-nav-icon">
+                                                    <i class='bx bxs-thermometer' ></i>
+                                                </figure>
+                                                <h3 class="temp-text">24°C</h3>
+                                            </button>
+        
+                                            <button class="room-nav-leftBtn humid">
+                                                <figure class="room-nav-icon"><i class='bx bx-droplet' style='color:#0c0c0c' ></i></figure>
+                                                <h3 class="humid-text">50%</h3>
+                                            </button>
+        
+                                            <button class="room-nav-leftBtn power">
+                                                <figure class="room-nav-icon"><i class='bx bxs-zap' style='color:#0c0c0c' ></i></figure>
+                                                <h3 class="power-text">350W</h3>
+                                            </button>
+        
+                                            <button class="room-nav-leftBtn wind">
+                                                <figure class="room-nav-icon"><i class='bx bx-wind'></i></figure>
+                                                <h3 class="wind-text">80%</h3>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            
+
+                                <div class="room-nav bed">
+                                    <div class="room-nav-content">
+                                        <button class="liveBtn">
+                                            <figure class="room-live-icon"> </figure>
+                                            <h3 class="live-text">
+                                                Live
+                                            </h3>
+                                        </button>
+                                    
+
+                                        <div class="room-right-buttons">
+                                            <button class="room-nav-leftBtn temp">
+                                                <figure class="room-nav-icon">
+                                                    <i class='bx bxs-thermometer' ></i>
+                                                </figure>
+                                                <h3 class="temp-text">28°C</h3>
+                                            </button>
+        
+                                            <button class="room-nav-leftBtn humid">
+                                                <figure class="room-nav-icon"><i class='bx bx-droplet' style='color:#0c0c0c' ></i></figure>
+                                                <h3 class="humid-text">60%</h3>
+                                            </button>
+        
+                                            <button class="room-nav-leftBtn power">
+                                                <figure class="room-nav-icon"><i class='bx bxs-zap' style='color:#0c0c0c' ></i></figure>
+                                                <h3 class="power-text">250W</h3>
+                                            </button>
+        
+                                            <button class="room-nav-leftBtn wind">
+                                                <figure class="room-nav-icon"><i class='bx bx-wind'></i></figure>
+                                                <h3 class="wind-text">40%</h3>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+
+                                <div class="room-nav kitch">
+                                    <div class="room-nav-content">
+                                        <button class="liveBtn">
+                                            <figure class="room-live-icon"> </figure>
+                                            <h3 class="live-text">
+                                                Live
+                                            </h3>
+                                        </button>
+                                    
+
+                                        <div class="room-right-buttons">
+                                            <button class="room-nav-leftBtn temp">
+                                                <figure class="room-nav-icon">
+                                                    <i class='bx bxs-thermometer' ></i>
+                                                </figure>
+                                                <h3 class="temp-text">26°C</h3>
+                                            </button>
+        
+                                            <button class="room-nav-leftBtn humid">
+                                                <figure class="room-nav-icon"><i class='bx bx-droplet' style='color:#0c0c0c' ></i></figure>
+                                                <h3 class="humid-text">60%</h3>
+                                            </button>
+        
+                                            <button class="room-nav-leftBtn power">
+                                                <figure class="room-nav-icon"><i class='bx bxs-zap' style='color:#0c0c0c' ></i></figure>
+                                                <h3 class="power-text">500W</h3>
+                                            </button>
+        
+                                            <button class="room-nav-leftBtn wind">
+                                                <figure class="room-nav-icon"><i class='bx bx-wind'></i></figure>
+                                                <h3 class="wind-text">55%</h3>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                               
+                                <div class="room-nav bath">
+                                    <div class="room-nav-content">
+                                        <button class="liveBtn">
+                                            <figure class="room-live-icon"> </figure>
+                                            <h3 class="live-text">
+                                                Live
+                                            </h3>
+                                        </button>
+                                    
+
+                                        <div class="room-right-buttons">
+                                            <button class="room-nav-leftBtn temp">
+                                                <figure class="room-nav-icon">
+                                                    <i class='bx bxs-thermometer' ></i>
+                                                </figure>
+                                                <h3 class="temp-text">26°C</h3>
+                                            </button>
+        
+                                            <button class="room-nav-leftBtn humid">
+                                                <figure class="room-nav-icon"><i class='bx bx-droplet' style='color:#0c0c0c' ></i></figure>
+                                                <h3 class="humid-text">80%</h3>
+                                            </button>
+        
+                                            <button class="room-nav-leftBtn power">
+                                                <figure class="room-nav-icon"><i class='bx bxs-zap' style='color:#0c0c0c' ></i></figure>
+                                                <h3 class="power-text">200W</h3>
+                                            </button>
+        
+                                            <button class="room-nav-leftBtn wind">
+                                                <figure class="room-nav-icon"><i class='bx bx-wind'></i></figure>
+                                                <h3 class="wind-text">30%</h3>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                               
+
+                                
+        
+                            </div>
+
+                            <figure class="room-background imaging">
+                            <!-- <img src="https://media.architecturaldigest.com/photos/62f3c04c5489dd66d1d538b9/master/pass/_Hall_St_0256_v2.jpeg" alt="">-->   
+                            </figure>
+                            
+                        </div>
+
+                        <div class="rooms">
+                            <div class="rooms-content">
+                                <div class="rooms-header">
+                                    <div class="rooms-title">
+                                        <h1>Rooms</h1>
+                                    </div>
+                                    <div class="rooms-about">
+                                        <figure class="rooms-about">
+                                            <i class="fa-solid fa-circle-exclamation"></i>
+                                        </figure>
+                                    </div>
+                                </div>
+
+                                <div class="rooms-border">
+                                    <svg height="1" width="100%">
+                                        <line x1="0" y1="0" x2="100%" y2="0" style="stroke:black;stroke-width:0.5" />
+                                    </svg>
+                                </div>
+                        
+                                <div class="rooms-lists">
+                                    <!-- Bedroom -->
+                                    <button class="room-item Bedroom">
+                                        <div class="rooms-lists-icon">
+                                            <i class='bx bx-bed'></i>
+                                        </div>
+                                        <div class="rooms-lists-body">
+                                            <h2>Bedroom</h2> 
+                                            <h3>3 device(-s)</h3>
+                                        </div>
+                                        <div class="Rooms-arrow">
+                                            <i class='bx bx-chevron-right'></i>
+                                        </div>
+                                    </button>
+                        
+                                    <!-- Kitchen -->
+                                    <button class="room-item Kitchen">
+                                        <div class="rooms-lists-icon">
+                                            <i class='bx bx-restaurant'></i>
+                                        </div>
+                                        <div class="rooms-lists-body">
+                                            <h2>Kitchen</h2> 
+                                            <h3>2 device(-s)</h3>
+                                        </div>
+                                        <div class="Rooms-arrow">
+                                            <i class='bx bx-chevron-right'></i>
+                                        </div>
+                                    </button>
+                                    
+                                    <!-- Living room (highlighted) -->
+                                    <button class="room-item Livingroom">
+                                        <div class="rooms-lists-icon">
+                                            <i class='bx bx-tv'></i>
+                                        </div>
+                                        <div class="rooms-lists-body">
+                                            <h2>Living room</h2> 
+                                            <h3>5 device(-s)</h3>
+                                        </div>
+                                        <div class="Rooms-arrow">
+                                            <i class='bx bx-chevron-right'></i>
+                                        </div>
+                                    </button>
+                        
+                                    <!-- Bathroom -->
+                                    <button class="room-item Bathroom">
+                                        <div class="rooms-lists-icon">
+                                            <i class='bx bx-bath'></i>
+                                        </div>
+                                        <div class="rooms-lists-body">
+                                            <h2>Bathroom</h2> 
+                                            <h3>2 device(-s)</h3>
+                                        </div>
+                                        <div class="Rooms-arrow">
+                                            <i class='bx bx-chevron-right'></i>
+                                        </div>
+                                    </button>
+                                </div>
+                        
+                                <div class="addroomBtn">
+                                    <button class="roomBtn-text">+ ADD ROOM</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="Room-controller">
+            <div class="w-layout-blockcontainer container w-container">
+                <div class="controller-container">
+                    <div class="controller-holder">
+                        <div class="controller-left">
+                            <div class="control-room-big">
+                                <div class="bigroom-container">
+                                    <div class="bigroom-content">
+                                        <!-- Top Section -->
+                                        <div class="bigroom-top">
+                                            <div class="bigroom-head">
+                                                <div class="bigroom-header">
+                                                    <div class="bigroom-caption">
+                                                        <h1>Bedroom</h1> <i class='bx bx-chevron-down'></i><!-- Dynamically change the texts here -->
+                                                    </div>
+                            
+                                                    <div class="bigroom-machine">
+                                                        <h4>Robot vacuum cleaner</h4>
+                                                    </div>
+                                                </div>
+                            
+                                                <!-- Mode Toggle (Switch Button) -->
+                                                <div class="bigroom-mode">
+                                                    <input type="checkbox" id="switch" class="toggle-switch">
+                                                    <label for="switch"></label>
+                                                </div>
+                                            </div>
+                                        </div>
+                            
+                                        <!-- Room Details (Robot Image & Information) -->
+                                        <div class="bigroom-detail">
+                                            <div class="bigroom-stats">
+                                                <div class="stat-box-text">
+                                                    <h2>90%</h2>
+                                                    <p>Filter status</p>
+                                                </div>
+                                                <div class="stat-box-text">
+                                                    <h2>10:00 AM</h2>
+                                                    <p>Next cleaning</p>
+                                                </div>
+                                            </div>
+                            
+                                            <div class="robot-image">
+                                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCyvBUeUVak_CF4dAqZk-phUGnVDYhEAwyAg&s" alt="Robot vacuum">
+                                            </div>
+                                        </div>
+                            
+                                        <!-- Bottom Section -->
+                                        <div class="bigroom-bottom">
+                                            <div class="stat-box">
+                                                <i class='bx bx-area'></i>
+                                                <div class="statbox-text">
+                                                    <h3>75 m²</h3>
+                                                    <p>Area cleaned</p>
+                                                </div>
+                                                
+                                            </div>
+                                            <div class="stat-box">
+                                                <i class='bx bx-time-five'></i>
+                                                <div class="statbox-text">
+                                                    <h3>30 min</h3>
+                                                    <p>Cleaning time</p>
+                                                </div>
+                                                
+                                            </div>
+                                            <div class="stat-box">
+                                                <i class='bx bx-battery'></i>
+                                                <div class="statbox-text">
+                                                    <h3>80%</h3>
+                                                    <p>Battery charge</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+
+                        </div>
+                        <div class="controller-right">
+                            <div class="control-room-small">
+                                <div class="smallroom-container">
+                                    <div class="smallroom-content">
+                                        
+                                        <div class="smallroom-top living">
+                                            <div class="smallroom-head">
+                                                <div class="smallroom-header">
+                                                    <div class="smallroom-caption">
+                                                        <h1>Living room</h1><i class='bx bx-chevron-down'></i><!--Dynamically change the texts here-->
+                                                    </div>
+                                                </div>
+                                                <figure class="smallroom-about">
+                                                    <i class="fa-solid fa-circle-exclamation"></i>
+                                                </figure>
+                                            </div>
+                                        </div>
+
+                                        <div class="smallroom-top kitch">
+                                            <div class="smallroom-head">
+                                                <div class="smallroom-header">
+                                                    <div class="smallroom-caption">
+                                                        <h1>Kitchen</h1><i class='bx bx-chevron-down'></i><!--Dynamically change the texts here-->
+                                                    </div>
+                                                </div>
+                                                <figure class="smallroom-about">
+                                                    <i class="fa-solid fa-circle-exclamation"></i>
+                                                </figure>
+                                            </div>
+                                        </div>
+
+                                        <div class="smallroom-top bath">
+                                            <div class="smallroom-head">
+                                                <div class="smallroom-header">
+                                                    <div class="smallroom-caption">
+                                                        <h1>Bathroom</h1><i class='bx bx-chevron-down'></i><!--Dynamically change the texts here-->
+                                                    </div>
+                                                </div>
+                                                <figure class="smallroom-about">
+                                                    <i class="fa-solid fa-circle-exclamation"></i>
+                                                </figure>
+                                            </div>
+                                        </div>
+
+                                        <div class="smallroom-top bed">
+                                            <div class="smallroom-head">
+                                                <div class="smallroom-header">
+                                                    <div class="smallroom-caption">
+                                                        <h1>Bedroom</h1><i class='bx bx-chevron-down'></i><!--Dynamically change the texts here-->
+                                                    </div>
+                                                </div>
+                                                <figure class="smallroom-about">
+                                                    <i class="fa-solid fa-circle-exclamation"></i>
+                                                </figure>
+                                            </div>
+                                        </div>
+
+                                        <div class="smallroom-scroller">
+                                            <div class="Device-change leftarrow">
+                                                <i class='bx bx-chevron-left'></i>
+                                            </div>
+
+                                            <div class="smartlamp-image">
+                                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSf5HotQ-9aNFP6cMshqoPOTolRk7smP_pWEg&s" alt="Smart Light Bulb">
+                                            </div>
+
+                                            <div class="Device-change rightarrow">
+                                                <i class='bx bx-chevron-right'></i>
+                                            </div>    
+                                        </div>
+                                        
+                                        <div class="smallroom-bottom living">
+                                            <div class="smallroom-bottom-container">
+                                                <div class="smartlamp-content">
+                                                    <div class="smartlamp-head">
+                                                        <div class="smartlamp-header">
+                                                            <div class="smartlamp-caption">
+                                                                <h2>Smart Lamp</h2>
+                                                            </div>
+                                                            <div class="smartlamp-devices">
+                                                                <h4>3 device</h4>
+                                                            </div>
+                                                        </div>
+                                                        <div class="smartlamp-mode">
+                                                            <input type="checkbox" id="tourner" class="toggle-tourner">
+                                                            <label for="tourner"></label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="brightness">
+                                                        <div class="brightness-slider">
+                                                            <div class="brightness-icon">
+                                                                <i class="fa-solid fa-sun"></i> <!-- Icon for brightness -->
+                                                            </div>
+                                                            <input type="range" min="0" max="100" value="70" class="slider" id="brightness-range">
+                                                            <div class="brightness-percentage">
+                                                                <span class="brightness-value">70%</span> <!-- Dynamically update this based on slider value -->
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="smallroom-bottom kitch">
+                                            <div class="smallroom-bottom-container">
+                                                <div class="smartlamp-content">
+                                                    <div class="smartlamp-head">
+                                                        <div class="smartlamp-header">
+                                                            <div class="smartlamp-caption">
+                                                                <h2>Smart Light</h2>
+                                                            </div>
+                                                            <div class="smartlamp-devices">
+                                                                <h4>2 device</h4>
+                                                            </div>
+                                                        </div>
+                                                        <div class="smartlamp-mode">
+                                                            <input type="checkbox" id="tourner" class="toggle-tourner">
+                                                            <label for="tourner"></label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="brightness">
+                                                        <div class="brightness-slider">
+                                                            <div class="brightness-icon">
+                                                                <i class="fa-solid fa-sun"></i> <!-- Icon for brightness -->
+                                                            </div>
+                                                            <input type="range" min="0" max="100" value="70" class="slider" id="brightness-range">
+                                                            <div class="brightness-percentage">
+                                                                <span class="brightness-value">70%</span> <!-- Dynamically update this based on slider value -->
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="smallroom-bottom bed">
+                                            <div class="smallroom-bottom-container">
+                                                <div class="smartlamp-content">
+                                                    <div class="smartlamp-head">
+                                                        <div class="smartlamp-header">
+                                                            <div class="smartlamp-caption">
+                                                                <h2>LED Lights</h2>
+                                                            </div>
+                                                            <div class="smartlamp-devices">
+                                                                <h4>3 device</h4>
+                                                            </div>
+                                                        </div>
+                                                        <div class="smartlamp-mode">
+                                                            <input type="checkbox" id="tourner" class="toggle-tourner">
+                                                            <label for="tourner"></label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="brightness">
+                                                        <div class="brightness-slider">
+                                                            <div class="brightness-icon">
+                                                                <i class="fa-solid fa-sun"></i> <!-- Icon for brightness -->
+                                                            </div>
+                                                            <input type="range" min="0" max="100" value="70" class="slider" id="brightness-range">
+                                                            <div class="brightness-percentage">
+                                                                <span class="brightness-value">70%</span> <!-- Dynamically update this based on slider value -->
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="smallroom-bottom bath">
+                                            <div class="smallroom-bottom-container">
+                                                <div class="smartlamp-content">
+                                                    <div class="smartlamp-head">
+                                                        <div class="smartlamp-header">
+                                                            <div class="smartlamp-caption">
+                                                                <h2>Mirror Lights</h2>
+                                                            </div>
+                                                            <div class="smartlamp-devices">
+                                                                <h4>2 device</h4>
+                                                            </div>
+                                                        </div>
+                                                        <div class="smartlamp-mode">
+                                                            <input type="checkbox" id="tourner" class="toggle-tourner">
+                                                            <label for="tourner"></label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="brightness">
+                                                        <div class="brightness-slider">
+                                                            <div class="brightness-icon">
+                                                                <i class="fa-solid fa-sun"></i> <!-- Icon for brightness -->
+                                                            </div>
+                                                            <input type="range" min="0" max="100" value="70" class="slider" id="brightness-range">
+                                                            <div class="brightness-percentage">
+                                                                <span class="brightness-value">70%</span> <!-- Dynamically update this based on slider value -->
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        
+                                    </div>
+
+                                    
+                                </div>
+                            </div>
+
+                            <div class="control-speakers">
+                                <div class="speakers-container">
+                                    <div class="speakers-content">
+                                        <div class="speaker-top">
+                                            <div class="speaker-head">
+                                                <div class="speaker-header">
+                                                    <div class="speaker-caption">
+                                                        <h1>Speakers</h1>
+                                                    </div>
+
+                                                    <div class="speaker-state">
+                                                        <h4>playing</h4><!--change dynamically-->
+                                                    </div>
+                                                </div>
+                                                <div class="speaker-mode">
+                                                    <input type="checkbox" id="joystick" class="toggle-joystick">
+                                                    <label for="joystick"></label>
+                                                </div>
+                                            </div>
+                                        </div>
+        
+                                        <div class="speaker-player">
+                                            <div class="wrapper">
+                                                
+
+                                                <div class="slider-container" id="volume">
+                                                    <i class=""fa da-volume-down></i>
+                                                    <input type="range"min="1" max="100" value="99" class="volume_slider"  onchange="setVolume()">
+                                                    <i class=""fa da-volume-up></i>
+                                                </div>
+                                                <div class="circular-slider-container">
+                                                    <div class="details">
+                                                        <div class="track-art"></div>
+                                                        <div class="track-name">Track Name</div>
+                                                        <div class="track-artist">Track Artist</div>
+                                                    </div>
+
+                                                    <div class="slider_container circular-slider">
+                                                        <div class="current-time">0:00</div>
+                                                        <input type="range" min="1" max="100" value="0" class="seek_slider" onchange="seekTo()">
+                                                        <div class="total-duration">0:00</div>
+                                                    </div>
+                                                </div>
+                                                
+    
+                                                <div class="player-buttons">
+                                                    <div class="random-track" onclick="randomTrack()">
+                                                        <i class="fas fa-random fa-2x" title="random"></i>
+                                                    </div>
+                                                    <div class="prev-track" onclick="prevTrack()">
+                                                        <i class="fa fa-step-backward fa-2x"></i>
+                                                    </div>
+                                                    <div class="playpause-track" onclick="playpauseTrack()">
+                                                        <i class="fa fa-play-circle fa-5x"></i>
+                                                    </div>
+                                                    <div class="next-track" onclick="nextTrack()">
+                                                        <i class='fa fa-step-forward fa-2x'></i>
+                                                    </div>
+                                                    <div class="repeat-track" onclick="repeatTrack()">
+                                                        <i class='bx bx-refresh' title="refresh"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            
+
+                                           
+        
+                                        </div>
+        
+                                        <div class="speaker-bottom">
+        
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+    
+    
+    <script src="case.js"></script>
+</body>
+</html>
