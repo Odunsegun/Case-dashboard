@@ -151,7 +151,106 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Load the room state and slider state on page load
     loadRoomState();
+
+    //slider for devices
+    const slides = document.querySelectorAll('.slides'); // All sliders for different rooms
+    const leftArrow = document.querySelector('.leftarrow'); // All left arrows
+    const rightArrow = document.querySelector('.rightarrow'); // All right arrows
+    let currentSlide = 0; // Track the current slide index
+    const totalSlides = document.querySelectorAll('.slide').length; // Total number of slides
+
+    const slideImages = {
+        'living': [
+            'Images/Led Bulb On.G03.watermarked.2k.png',  // Image for first slide (Smart Lamp)
+            'Images/Air Purifier.G03.watermarked.2k.png'  // Image for second slide (Air Purifier)
+        ],
+        // You can add other room sliders with their corresponding images here
+    };
+
+    // Function to update the image based on the current slide
+    function updateImage(sliderClass, currentSlide) {
+        const imageElement = document.querySelector(`.${sliderClass}-image img`);
+        if (imageElement && slideImages[sliderClass][currentSlide]) {
+            imageElement.src = slideImages[sliderClass][currentSlide]; // Change the image source
+        }
+    }
+
+    // Function to update the slider position and image based on the current slide index
+    function updateSlide(slider, currentSlide, totalSlides, sliderClass) {
+        slider.style.marginLeft = `-${currentSlide * 100}%`; // Update the slider position
+        updateImage(sliderClass, currentSlide); // Update the image based on the current slide
+    }
+
+    // Function to handle the navigation of slides
+    function addSliderNavigation(slider, leftArrow, rightArrow, totalSlides, sliderClass) {
+        let currentSlide = 0;
+
+        // Left arrow navigation
+        leftArrow.addEventListener('click', () => {
+            if (currentSlide > 0) {
+                currentSlide--; // Go to previous slide
+            } else {
+                currentSlide = totalSlides - 1; // Loop to the last slide if at the start
+            }
+            updateSlide(slider, currentSlide, totalSlides, sliderClass);
+        });
+
+        // Right arrow navigation
+        rightArrow.addEventListener('click', () => {
+            if (currentSlide < totalSlides - 1) {
+                currentSlide++; // Go to the next slide
+            } else {
+                currentSlide = 0; // Loop to the first slide if at the end
+            }
+            updateSlide(slider, currentSlide, totalSlides, sliderClass);
+        });
+
+        // Manual navigation via radio buttons
+        const manualBtns = slider.parentNode.querySelectorAll('.manual-btn');
+        manualBtns.forEach((btn, index) => {
+            btn.addEventListener('click', () => {
+                currentSlide = index;
+                updateSlide(slider, currentSlide, totalSlides, sliderClass);
+            });
+        });
+    }
+
+
+    // Add slider functionality to each room's slider
+    const livingSlider = document.querySelector('.living-slides');
+    const livingLeftArrow = document.querySelector('.living-left');
+    const livingRightArrow = document.querySelector('.living-right');
+    const totalLivingSlides = livingSlider.querySelectorAll('.slide').length;
+    addSliderNavigation(livingSlider, leftArrow, rightArrow, totalLivingSlides, 'living');
+
+    const bedSlider = document.querySelector('.slides-bed');
+    const bedLeftArrow = document.querySelector('.leftarrow');
+    const bedRightArrow = document.querySelector('.rightarrow');
+    const totalBedSlides = bedSlider.querySelectorAll('.slide-bed').length;
+    addSliderNavigation(bedSlider, leftArrow, rightArrow, totalBedSlides, 'bed');
+
+    const kitchSlider = document.querySelector('.slides-kitch');
+    const kitchLeftArrow = document.querySelector('.leftarrow');
+    const kitchRightArrow = document.querySelector('.rightarrow');
+    const totalKitchSlides = kitchSlider.querySelectorAll('.slide-kitch').length;
+    addSliderNavigation(kitchSlider, leftArrow, rightArrow, totalKitchSlides, 'kitch');
+
+    const bathSlider = document.querySelector('.slides-bath');
+    const bathLeftArrow = document.querySelector('.leftarrow');
+    const batRightArrow = document.querySelector('.rightarrow');
+    const totalBathSlides = bathSlider.querySelectorAll('.slide-bath').length;
+    addSliderNavigation(bathSlider, leftArrow, rightArrow, totalBathSlides, 'bath');
+
+    // Grab references to the images and the slide navigation elements
+const smartLampImage = document.querySelector('.smartlamp-image img');
+const airPurifierImage = document.querySelector('.airpurifier-image img');
+
+
+
 });
+
+/*
+ */
 
 
 

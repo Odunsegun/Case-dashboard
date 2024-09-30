@@ -858,6 +858,9 @@ cursor: pointer;
     
     
 }
+.smallroom-top{
+    z-index: 2000000000;
+}
 .smallroom-container{
     display: flex;
     flex-direction: column;
@@ -872,6 +875,7 @@ cursor: pointer;
     flex-direction: row;
     justify-content: space-between;
     padding: 16px;
+    
 }
 .smallroom-header {
     display: block;
@@ -882,6 +886,7 @@ cursor: pointer;
 .smallroom-caption{
     display: flex;
     gap: 8px;
+    z-index: 2000;
 }
 .smallroom-caption h1 {
     font-size: 1.5rem;
@@ -903,6 +908,13 @@ cursor: pointer;
 }
 .Device-change{
     margin-top: 4vh;
+    cursor: pointer;
+    display: flex;
+}
+.switchslides{
+    display: flex;
+    flex-direction: row; 
+    position: absolute;
 }
 .Device-change.leftarrow{
     margin-right: auto;
@@ -914,7 +926,13 @@ cursor: pointer;
     font-size: 20px;
     color: white;
 }
-.smartlamp-image {
+.Device-change:hover {
+    opacity: 1.0;
+    border-radius: 50%;
+    transition: ease-in-out 0.5s;
+    background-color: rgba(0, 0, 0, 0.2); 
+}
+.smartlamp-image, .airpurifier-image {
     width: 200px;
     height: 200px;
     border-radius: 0.5rem;
@@ -922,14 +940,16 @@ cursor: pointer;
     top: 0; /* Position it at the top */
     left: 50%; /* Center horizontally */
     transform: translateX(-50%) rotate(180deg); /* Center it by adjusting its X position and rotate it 180 degrees */
-    z-index: 30000; /* Ensure it stays on top of other elements */
+    z-index: 1; /* Ensure it stays on top of other elements */
 }
-.smartlamp-image img {
+.airpurifier-image {
+    display: none; /* Hide air purifier image by default */
+}
+.smartlamp-image img, .airpurifier-image img{
     width: 200px;
     height: 200px;
     border-radius: 0.5rem;
-    z-index: 3;
-    display: none;
+    background-color: transparent;
 }
 .smallroom-bottom{
     margin-top: 3%;
@@ -961,6 +981,62 @@ cursor: pointer;
     display: flex;
     justify-content: flex-end; 
 }
+
+.airpurifier-head{
+    padding: 0px 16px;
+    padding-top: 16px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.airpurifier-header{
+    display: block;
+    justify-content: space-between;
+    align-items: center; 
+    
+}
+.airpurifier-caption{
+    font-size: 12px;
+    color: white;
+}
+.airpurifier-devices h4{
+    font-size: 16px;
+    color: #d4dcde;
+}
+.airpurifier-mode{
+    display: flex;
+    justify-content: flex-end; 
+}
+
+.dishwasher-head,
+.aromatherapy-head{
+    padding: 0px 16px;
+    padding-top: 16px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.dishwasher-header,
+.aromatherapy-header{
+    display: block;
+    justify-content: space-between;
+    align-items: center;   
+}
+.dishwasher-caption,
+.aromatherapy-caption{
+    font-size: 12px;
+    color: white;
+}
+.dishwasher-devices h4,
+.aromatherapy-devices h4{
+    font-size: 16px;
+    color: #d4dcde;
+}
+.dishwasher-mode,
+.aromatherapy-mode{
+    display: flex;
+    justify-content: flex-end; 
+}
 .toggle-tourner {
     display: none;
 }
@@ -984,11 +1060,106 @@ cursor: pointer;
     transition: 0.3s;
 }
 
-.toggle-tourner:checked + label:before {
+.toggle-tourner-LED:checked + label:before {
     left: 22px;
     background-color: #0b1326;
     color: white;
 }
+.toggle-tourner-LED {
+    display: none;
+}
+.toggle-tourner-LED + label {
+    width: 48px;
+    height: 28px;
+    background-color: #ccc;
+    border-radius: 20px;
+    position: relative;
+    cursor: pointer;
+}
+.toggle-tourner-LED + label:before {
+    content: '';
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    background-color: white;
+    border-radius: 50%;
+    top: 2px;
+    left: 2px;
+    transition: 0.3s;
+}
+
+.toggle-tourner:checked-Lights + label:before {
+    left: 22px;
+    background-color: #0b1326;
+    color: white;
+}
+
+.toggle-tourner-Lights:checked + label:before {
+    left: 22px;
+    background-color: #0b1326;
+    color: white;
+}
+.toggle-tourner-Lights {
+    display: none;
+}
+.toggle-tourner-Lights + label {
+    width: 48px;
+    height: 28px;
+    background-color: #ccc;
+    border-radius: 20px;
+    position: relative;
+    cursor: pointer;
+}
+.toggle-tourner-Lights + label:before {
+    content: '';
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    background-color: white;
+    border-radius: 50%;
+    top: 2px;
+    left: 2px;
+    transition: 0.3s;
+}
+
+.toggle-tourner:checked-Lights + label:before {
+    left: 22px;
+    background-color: #0b1326;
+    color: white;
+}
+
+.toggle-tourner-mirror:checked + label:before,
+.toggle-tourner-aromatherapy:checked + label:before {
+    left: 22px;
+    background-color: #0b1326;
+    color: white;
+}
+.toggle-tourner-mirror,
+.toggle-tourner-aromatherapy {
+    display: none;
+}
+.toggle-tourner-mirror + label,
+.toggle-tourner-aromatherapy + label {
+    width: 48px;
+    height: 28px;
+    background-color: #ccc;
+    border-radius: 20px;
+    position: relative;
+    cursor: pointer;
+}
+.toggle-tourner-mirror + label:before,
+.toggle-tourner-aromatherapy + label:before {
+    content: '';
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    background-color: white;
+    border-radius: 50%;
+    top: 2px;
+    left: 2px;
+    transition: 0.3s;
+}
+
 /*brightness scale*/
 .brightness {
     display: flex;
@@ -1016,7 +1187,7 @@ cursor: pointer;
     font-size: 20px;
     color: #333;
 }
-.slider {
+.brightness-slide {
     -webkit-appearance: none;
     width: 150px;
     height: 8px;
@@ -1117,9 +1288,7 @@ cursor: pointer;
         background-color: white;
         border-radius: 50%;
     }
-    .brightness-slider {
-        width: 200px;
-    }
+    
     .slider {
         width: 100px;
     }
@@ -1139,11 +1308,11 @@ cursor: pointer;
         font-size: 1.75rem;
     }
     .brightness-slider {
-        width: 180px;
+        width: 18vw;
         height: 8vh;
     }
-    .slider {
-        width: 80px;
+    .brightness-slide {
+        width: 10vw;
     }
     .smartlamp-head {
         padding: 16px 16px;
@@ -1207,7 +1376,7 @@ cursor: pointer;
         justify-content: space-between;
     }
     .rooms{
-        width: auto;
+        width: 87vw;
     }
     .rooms-title h1 {
         font-size: 32px;
@@ -1293,7 +1462,7 @@ cursor: pointer;
         width: 40vw;
         height: 10vh;
     }
-    .slider {
+    .brightness-slide {
         width: 35vw;
     }
     .control-speakers{
@@ -1358,6 +1527,15 @@ cursor: pointer;
 }
 
 @media screen and (max-width: 769px) {
+    .control-room-small {
+        width: 42vw;
+    }
+    .control-speakers {
+        width: 42vw;
+    }
+    .control-room-big {
+        width: 85vw;
+    }
     .liveBtn {
         padding: 10px 20px;
     }
@@ -1415,7 +1593,7 @@ cursor: pointer;
         gap: 6px;
     }
     .control-room-big {
-        width: 83vw;
+        width: 85vw;
     }
     .bigroom-bottom {
         margin-top: -5vh;
@@ -1431,15 +1609,26 @@ cursor: pointer;
         gap: 16px;
     }
     .control-room-small {
-        width: 76vw;
+        width: 85vw;
     }
     .control-speakers{
-        width: 76vw;
+        width: 85vw;
     }
     .brightness-slider {
         padding: 5px 10px;
         width: 60vw;
         height: 10vh;
+    }
+    .robot-image {
+        width: 200px;
+        height: 200px;
+        border-radius: 0.5rem;
+        margin-right: 200px;
+    }
+    .robot-image img {
+        width: 200px;
+        height: 200px;
+        border-radius: 0.5rem;
     }
 }
 
@@ -1460,7 +1649,7 @@ cursor: pointer;
         gap: 5px;
     }
     .rooms {
-        width: 85vw;
+        width: 86vw;
     }
     .room {
         width: 85vw;
@@ -1479,6 +1668,15 @@ cursor: pointer;
     }
     .room-content{
         padding: 1vw;
+    }
+    .control-room-big {
+        width: 83vw;
+    }
+    .control-room-small {
+        width: 83vw;
+    }
+    .control-speakers {
+        width: 83vw;
     }
 
     
@@ -1509,7 +1707,7 @@ cursor: pointer;
     .smartlamp-head {
         padding: 16px 16px;
     }
-    .slider {
+    .brightness-slide {
         width: 28vw;
     }
     .speaker-caption h1 {
@@ -1522,7 +1720,7 @@ cursor: pointer;
         padding: 14px 8vw;
         font-size: 1rem;
     }
-    .slider {
+    .brightness-slide{
         width: 20vw;
     }
 }
@@ -1533,4 +1731,108 @@ cursor: pointer;
 @media screen and (max-width: 200px) {
 }
 
+.slider, .slider-bed, .slider-kitch, .slider-bath {
+    position: relative;
+    width: 100%;
+    height: 22vh;
+    overflow: hidden;
+    border-radius: 2rem;
+}
+.living-slides, .slides-bed, .slides-kitch, .slides-bath {
+    display: flex;
+    transition: margin-left 0.5s ease-in-out;
+    width: 200%; /* Adjust based on the number of slides */
+}
 
+.slide, .slide-bed, .slide-kitch, .slide-bath {
+    width: 100%; /* Adjust based on the number of slides */
+    height: 100%;
+}
+
+.navigation-manual, .navigation-manual-bed, .navigation-manual-kitch , .navigation-manual-bath{
+    margin-top: -250px;
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    z-index: 100;
+    transform: translateY(50%);
+}
+
+.manual-btn, .manual-btn-bed, .manual-btn-kitch, .manual-btn-bath {
+    border: 1px solid #5482FF;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.manual-btn:hover, .manual-btn-bed:hover, .manual-btn-kitch:hover, .manual-btn-bath:hover {
+    background: #E6ECFF;
+}
+
+.manual-btn:not(:last-child), .manual-btn-bed:not(:last-child), .manual-btn-kitch:not(:last-child), .manual-btn-bath:not(:last-child) {
+    margin-right: 15vw;
+}
+
+#radio-living1:checked ~ .living-slides .first,
+#radio-bed1:checked ~ .slides-bed .first
+#radio-bath1:checked ~ .slides-bath .first
+#radio-kitch1:checked ~ .slides-kitch .first {
+    margin-left: 0%;
+}
+
+#radio-living2:checked ~ .living-slides .first,
+#radio-bed2:checked ~ .slides-bed .first
+#radio-kitch2:checked ~ .slides-kitch .first
+#radio-bath2:checked ~ .slides-bath .first {
+    margin-left: -100%;
+}
+
+
+
+/*
+.slides input{
+    display: none;
+}
+.slide img{
+    width: 100%;
+    height: 80%;
+    object-fit: cover; 
+    object-position: center;
+}
+
+
+
+
+
+
+.navigation-auto{
+    margin-top: 650px;
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    transform: translateY(50%);
+}
+.navigation-auto div{
+    margin-left: 0px;
+    border: 1px solid #5482FF;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;  
+}
+.navigation-auto div:not(:last-child){
+    margin-right: 20px;
+}
+#radio1:checked ~ .navigation-auto .auto-btn1{
+    background-color: #E6ECFF;
+}
+#radio2:checked ~ .navigation-auto .auto-btn2{
+    background-color: #E6ECFF;
+}
+#radio3:checked ~ .navigation-auto .auto-btn3{
+    background-color: #E6ECFF;
+}
+*/
